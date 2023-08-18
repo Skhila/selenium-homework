@@ -12,17 +12,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class SwitchToTest {
-    //    Setup WebDriver
-    private static WebDriver driver;
-
-    @BeforeMethod
-    public static void setupChromeWebDriver(){
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-    }
-
+public class SwitchToTest extends TestBuilder{
     @Test
     public void iFrameTest(){
 //        Navigate to URL
@@ -58,10 +48,5 @@ public class SwitchToTest {
 
 //        Switch to alert and accept it
         driver.switchTo().alert().accept();
-    }
-//    Quit WebDriver
-    @AfterMethod
-    public void tearDown() {
-        driver.quit();
     }
 }
