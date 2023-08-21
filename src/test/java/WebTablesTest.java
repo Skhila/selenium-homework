@@ -47,7 +47,7 @@ public class WebTablesTest {
                 if(colNum == 1){
                     carName = driver.findElement(By.xpath("//*[@id=\"t01\"]/tbody/tr[" + rowNum + "]/td[" + colNum + "]")).getText();
                 }
-                if (colNum == 3){
+                if (colNum == columnSize){
                     carPrice = driver.findElement(By.xpath("//*[@id=\"t01\"]/tbody/tr[" + rowNum + "]/td[" + colNum + "]")).getText();
                     cars.put(carName, carPrice);
                 }
@@ -62,9 +62,9 @@ public class WebTablesTest {
 
 //      Result:
 
-//        Make: Suzuki, Price: 8,00,000
-//        Make: Hyundai, Price: 12,00,000
-//        Our Favorite 🤞👉 Make: Honda, Price: 6,00,000
+//        Make: Suzuki, Price: 8,00,000₹
+//        Make: Hyundai, Price: 12,00,000₹
+//        Our Favorite 🤞👉 Make: Honda, Price: 6,00,000₹
     }
 
     //    Quit WebDriver
