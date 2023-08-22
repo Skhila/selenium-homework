@@ -1,9 +1,10 @@
+import TestBuilders.HeadlessChromeBuilder;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-public class Exceptions extends TestBuilder{
+public class Exceptions extends HeadlessChromeBuilder {
     @Test
     public void exceptionsTest(){
 //        Navigate to the URL
@@ -39,7 +40,5 @@ public class Exceptions extends TestBuilder{
         }catch(StaleElementReferenceException e){
             System.out.printf("*** *** *** *** \nStale Element Exception caught!!!\n*** *** *** ***\n%s\n", e.getMessage());
         }
-
     }
-
 }

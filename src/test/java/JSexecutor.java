@@ -1,9 +1,10 @@
+import TestBuilders.HeadlessChromeBuilder;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class JSexecutor extends TestBuilder{
+public class JSexecutor extends HeadlessChromeBuilder {
     @Test
     public void hoverTest(){
 //        Navigate to the URL
